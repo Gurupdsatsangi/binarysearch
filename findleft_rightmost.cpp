@@ -23,7 +23,7 @@ int bins_right(int nums[],int n,int target){
         int mid=s+(e-s)/2;
         if(nums[mid]==target){
             ans=mid;
-            e=mid-1;
+            s=mid+1;
             
         }
         else if(nums[mid]<target){
@@ -36,12 +36,12 @@ int bins_right(int nums[],int n,int target){
     return ans;
 }
 int main(){
-    int nums[6]={1,2,3,4,7,9};
+    int nums[6]={1,2,3,3,3,9};
     int n=6;
     int target;
     cout << "enter target";
     cin >> target;
     cout << bins_left(nums,n,target) <<"\n";
     cout << bins_right(nums,n,target) << "\n";
-  
+    cout<<"total occurance"<<bins_right(nums,n,target)-bins_left(nums,n,target)+1<<"\n";
 }
