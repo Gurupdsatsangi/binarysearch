@@ -43,5 +43,6 @@ int main(){
     cin >> target;
     cout << bins_left(nums,n,target) <<"\n";
     cout << bins_right(nums,n,target) << "\n";
-    cout<<"total occurance"<<bins_right(nums,n,target)-bins_left(nums,n,target)+1<<"\n";
+    cout<<"total occurance"<<bins_right(nums,n,target)-bins_left(nums,n,target)+1
+    <<"\n";
 }
